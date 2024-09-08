@@ -14,3 +14,6 @@ alur hands-on
 5. addnew file ke staging: `git add` atau `git add namafile`
 5. commit branch baru
 6. push branch baru ke remote
+
+ini untuk pengujuan branch feature
+untuk melihat conflict
