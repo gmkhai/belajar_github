@@ -1,3 +1,5 @@
+NOTE:
+
 1. Make directory
 2. masuk ke dir baru
 3. git init
