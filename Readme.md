@@ -12,33 +12,62 @@ alur hands-on
 3. modify existing file
 4. create branch baru `git checkout -b add/file`
 5. add new file ke staging: `git add .` atau `git add namafile`
-5. commit branch baru `git commit -m "adding readme file"`
-6 lihat log: `git log -n2` `-n`: untuk mendefinikasi banyaknya log commit yang mau dilihat
-7. menyimpan perubahan ke stash area karna masih Work in progress `git stash`
-8. pindah branch dari add/file ke main:
+6. commit branch baru `git commit -m "adding readme file"`
+7 lihat log: `git log -n2` `-n`: untuk mendefinikasi banyaknya log commit yang mau dilihat
+8. menyimpan perubahan ke stash area karna masih Work in progress `git stash`
+9. pindah branch dari add/file ke main:
     - `git checkout -b main` (branch main baru)
     - `git checkout main` (jika branch sudah ada)
-9. kembalikan ke stash WIP `git stash pop`
-10. Tambahkan beberapa line di test.txt
-11. `git add test.txt`
-12. Commit perubahan di test.txt: `git commit -m "menambahkan beberapa line"`
-13. Melihat perubahan line di file Readme.md: `git diff Readme.md`
-14. Add Readme.md ke staging area: `git add Readme.md`
-15. Commit perubahan di Readme.md: `git commit -m "menambahkan step git"`
-16. Melihat log lebih simple: `git log --oneline`
-17. Checkout main: `git checkout main`
-18. Bikin branch baru dari main: `git checkout add/features`
-19. Add some lines ke Readme.md
-20. Git add Readme.md: `git add Readme.md`
-21. Commit Readme.md: `git add Readme.md` lalu `git commit -m "add failed line"`
-22. Merge add/features branch ke add/file:
+10. kembalikan ke stash WIP `git stash pop`
+11. Tambahkan beberapa line di test.txt
+12. `git add test.txt`
+13. Commit perubahan di test.txt: `git commit -m "menambahkan beberapa line"`
+14. Melihat perubahan line di file Readme.md: `git diff Readme.md`
+15. Add Readme.md ke staging area: `git add Readme.md`
+16. Commit perubahan di Readme.md: `git commit -m "menambahkan step git"`
+17. Melihat log lebih simple: `git log --oneline`
+18. Checkout main: `git checkout main`
+19. Bikin branch baru dari main: `git checkout add/features`
+20. Add some lines ke Readme.md
+21. Git add Readme.md: `git add Readme.md`
+22. Commit Readme.md: `git add Readme.md` lalu `git commit -m "add failed line"`
+23. Merge add/features branch ke add/file:
     - `git checkout add/file`
     - `git merge add/features`
 
-23. push branch baru ke remote
-24. Create Repository di Github
-25. Copy url repository di Github
-26. Check remote list: `git remote -v`
-27. git push ke remote: `git remote add origin https://github.com/gmkhai/belajar_github.git`
+24. push branch baru ke remote
+25. Create Repository di Github
+26. Copy url repository di Github
+27. Check remote list: `git remote -v`
+28. git push ke remote: `git remote add origin https://github.com/gmkhai/belajar_github.git`
 
-6. push branch baru ke remote
+
+
+# How to make conflicted file:
+1. `git checkout add/file`
+2. Adding new line di text.txt
+3. `git add test.txt`
+4. `git commit -m "adding new line"`
+5. `git checkout fix/readme`
+6. Adding new line to text.txt in the same line as add/file
+7. `git stash`
+8. `git merge add/file`
+9. `git stash pop`
+
+
+# Resolve conflict:
+1. Kalau terjadi conflict seperti gambar di bawah ini:
+
+![Screenshot 2024-09-08 125054.png](<Screenshot 2024-09-08 125054.png>)
+
+2. Yang perlu kita lakukan:
+    - Diskusikan dengan team mates mana yang bener
+    - Apakah accept both changes, incoming changes, current changes
+    - Klik salah satu antara ketiga pilihan itu
+    - save file
+    - `git status`: untuk melihat status git repository
+
+    ![alt text](<Screenshot 2024-09-08 125246.png>)
+    - `git add Readme.md`
+    - `git commit -m "message"`
+    - `git push origin nama-branch`
