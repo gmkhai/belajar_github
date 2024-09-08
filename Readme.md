@@ -27,5 +27,12 @@ alur hands-on
 15. Commit perubahan di Readme.md: `git commit -m "menambahkan step git"`
 16. Melihat log lebih simple: `git log --oneline`
 17. Checkout main: `git checkout main`
+18. Bikin branch baru dari main: git checkout add/features
+19. Add some lines ke Readme.md
+20. Git add Readme.md: git add Readme.md
+21. Commit Readme.md: git add Readme.md lalu git commit -m "add failed line"
+22. Merge add/features branch ke add/file:
+    - git checkout add/file
+    - git merge add/features
 
 6. push branch baru ke remote
