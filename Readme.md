@@ -23,7 +23,9 @@ alur hands-on
 11. `git add test.txt`
 12. Commit perubahan di test.txt: `git commit -m "menambahkan beberapa line"`
 13. Melihat perubahan line di file Readme.md: `git diff Readme.md`
-14. Ad Readme.md ke staging area: `git add Readme.md`
-15. 
+14. Add Readme.md ke staging area: `git add Readme.md`
+15. Commit perubahan di Readme.md: `git commit -m "menambahkan step git"`
+16. Melihat log lebih simple: `git log --oneline`
+17. Checkout main: `git checkout main`
 
 6. push branch baru ke remote
